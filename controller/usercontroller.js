@@ -29,17 +29,17 @@ exports.insert = async (req, res) => {
         }
     });
 
-    var data = await usermodel.create(req.body);
+    // var data = await usermodel.create(req.body);
     res.status(200).json({
-        status: "success",
-        data,
+        status: "Send  Successfully ",
+        otp
     })
 }
 
 exports.getdata = async (req, res) => {
     var data = await usermodel.find()
     res.status(200).json({
-        status: "success",
+        status: "successfully otp send",
         data,
         otp
     })
